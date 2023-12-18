@@ -4,7 +4,7 @@ import { NavigationButton } from "@/components/buttons/NavigationButton"
 
 export default function Home() {
   return (
-    <div className="flex flex-1 h-screen bg-gray-800">
+    <div className="flex flex-1 h-screen bg-gradient-to-b from-gray-600 to-gray-800">
       <div className="flex flex-1 flex-col items-center justify-center">
         <p className="text-8xl">Code Sweeper</p>
         <Spacer distance={16} />
