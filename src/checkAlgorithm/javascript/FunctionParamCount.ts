@@ -1,18 +1,18 @@
 // interfaces
 import { ICheckResults, ISingleCheckResult } from "../../utils/interfaces/check"
 
-export const FunctionParamCount = (inputCode: string, lineNumber: number, currentResult: ICheckResults) => {
+export const functionParamCount = (inputCode: string, lineNumber: number, currentResult: ICheckResults) => {
   let result = currentResult
 
-  const functionDeclarationRegex = /function\s+([a-zA-Z_$][\w$]*)\s*\(([^)]*)\)/g;
-  const arrowFunctionRegex = /([a-zA-Z_$][\w$]*)\s*=\s*\(([^)]*)\)\s*=>/g;
+  const functionDeclarationRegex = /function\s+([a-zA-Z_$][\w$]*)\s*\(([^)]*)\)/g
+  const arrowFunctionRegex = /([a-zA-Z_$][\w$]*)\s*=\s*\(([^)]*)\)\s*=>/g
 
   // function
-  let matches = Array.from(inputCode.matchAll(functionDeclarationRegex));
+  let matches = Array.from(inputCode.matchAll(functionDeclarationRegex))
 
   for (const match of matches) {
-    const functionName: string = match[1];
-    const parameters: string[] = match[2].split(',').map(param => param.trim());
+    const functionName: string = match[1]
+    const parameters: string[] = match[2].split(',').map(param => param.trim())
 
     if (parameters.length >= 3) {
       let newResult: ISingleCheckResult = {
@@ -33,11 +33,11 @@ export const FunctionParamCount = (inputCode: string, lineNumber: number, curren
   }
 
   // arrow function
-  matches = Array.from(inputCode.matchAll(arrowFunctionRegex));
+  matches = Array.from(inputCode.matchAll(arrowFunctionRegex))
 
   for (const match of matches) {
-    const functionName: string = match[1];
-    const parameters: string[] = match[2].split(',').map(param => param.trim());
+    const functionName: string = match[1]
+    const parameters: string[] = match[2].split(',').map(param => param.trim())
 
     if (parameters.length >= 3) {
       let newResult: ISingleCheckResult = {

@@ -2,15 +2,19 @@
 import Header from "./Header"
 import Footer from "./Footer"
 import ResultArea from "./ResultArea"
+import AiResultArea from "./AiResultArea"
 
-const Checker = () => {
+const Result = () => {
   return (
     <div className="flex flex-1 flex-col h-screen bg-gray-800">
       <Header />
-      <ResultArea />
+      <div className="flex flex-1 overflow-y-scroll">
+        <ResultArea />
+        <AiResultArea />
+      </div>
       <Footer />
     </div>
   )
 }
 
-export default Checker
+export default Result

@@ -9,11 +9,11 @@ interface props {
 export const NavigationButton = (props: props) => {
   return (
     <Link href={props.navigationLink}>
-      <div
+      <button
         className="px-4 py-2 rounded-lg bg-emerald-500"
       >
         <p className="select-none text-2xl">{props.title}</p>
-      </div>
+      </button>
     </Link>
   )
 }

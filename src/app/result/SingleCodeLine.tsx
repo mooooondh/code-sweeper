@@ -15,6 +15,7 @@ import typeTranslator from "@/utils/translator/typeTranslator.json"
 interface props {
   lineNumber: number
   codeLine: string
+  isShowWarn: boolean
 }
 
 export const SingleCodeLine = (props: props) => {
@@ -22,7 +23,7 @@ export const SingleCodeLine = (props: props) => {
 
   const { checkResult } = useChecker()
 
-  if (checkResult[props.lineNumber] && checkResult[props.lineNumber].length >= 1) {
+  if (props.isShowWarn && checkResult[props.lineNumber] && checkResult[props.lineNumber].length >= 1) {
     switch (checkResult[props.lineNumber][0].type) {
       case "warn": {
         return (

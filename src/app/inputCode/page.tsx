@@ -7,7 +7,7 @@ import EnterCodeArea from "./EnterCodeArea"
 
 const Checker = () => {
   return (
-    <div className="flex flex-1 flex-col h-screen bg-gray-800">
+    <div className="flex flex-1 flex-col h-screen">
       <Header />
       <EnterCodeArea />
       <Footer />

@@ -1,12 +1,12 @@
 // interfaces
 import { ICheckResults, ISingleCheckResult } from "../../utils/interfaces/check"
 
-export const FindConsoleLog = (inputCode: string, lineNumber: number, currentResult: ICheckResults) => {
+export const findConsoleLog = (inputCode: string, lineNumber: number, currentResult: ICheckResults) => {
   let result = currentResult
 
-  const regex = /console\.log\(/g;
+  const regex = /console\.log\(/g
 
-  const matches = inputCode.match(regex);
+  const matches = inputCode.match(regex)
 
   if (matches) {
     let newResult: ISingleCheckResult = {

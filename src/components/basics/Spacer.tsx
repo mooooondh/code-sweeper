@@ -4,6 +4,6 @@ interface props {
 
 export const Spacer = (props: props) => {
   return (
-    <div style={{ width: props.distance + "px", height: props.distance + "px" }} />
+    <div style={{ minWidth: props.distance + "px", minHeight: props.distance + "px" }} />
   )
 }

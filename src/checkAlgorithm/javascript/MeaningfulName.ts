@@ -1,7 +1,7 @@
 // interfaces
 import { ICheckResults, ISingleCheckResult } from "../../utils/interfaces/check"
 
-export const MeaningfulName = (inputCode: string, lineNumber: number, currentResult: ICheckResults) => {
+export const meaningfulName = (inputCode: string, lineNumber: number, currentResult: ICheckResults) => {
   let result = currentResult
 
   const nameList = extractVariableAndFunctionNames(inputCode)
@@ -76,11 +76,11 @@ export const MeaningfulName = (inputCode: string, lineNumber: number, currentRes
 }
 
 const extractVariableAndFunctionNames = (code: string) => {
-  const matches = code.match(/\b(?:const|let|var|function)\s+([a-zA-Z_]\w*)/g);
+  const matches = code.match(/\b(?:const|let|var|function)\s+([a-zA-Z_]\w*)/g)
 
   const uniqueNames = matches
     ? Array.from(new Set(matches.map(match => match.split(/\s+/)[1])))
-    : [];
+    : []
 
-  return uniqueNames;
+  return uniqueNames
 }
