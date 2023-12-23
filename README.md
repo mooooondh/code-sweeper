@@ -1,3 +1,10 @@
 # Code Sweeper
 
-깨끗한 코드를 위해, 개선 사항을 추천드립니다.
+Recommend clean code using algorithms and AI.     
+you can update this algorithm!
+
+## support
+|Language|Algotirhm|AI|
+|:---|:---:|:---:|
+|Javascript|Y|Y|
+|Python|N|Y|
