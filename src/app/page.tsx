@@ -8,6 +8,7 @@ import { NavigationButton } from "@/components/buttons/NavigationButton"
 import { NormalTag } from "@/components/Tags/NormalTag"
 
 // image
+import ICON from "../assets/icons/logo.svg"
 import GITHUB from "../assets/icons/github.svg"
 
 export default function Home() {
@@ -26,6 +27,14 @@ export default function Home() {
 
       <div className="flex flex-1 flex-col items-center justify-center">
         <div className="flex">
+          <Image
+            src={ICON}
+            alt={"logo"}
+            width={72}
+            height={72}
+          />
+          <Spacer distance={16} />
+
           <p className="text-8xl font-extrabold bg-gradient-to-r from-yellow-300 from-10% via-pink-600 to-indigo-500 text-transparent bg-clip-text">Code Sweeper</p>
           <div>
             <NormalTag
