@@ -1,7 +1,7 @@
 # Code Sweeper
+[![Go To Website](public/code-sweeper.png)](https://code-sweeper-five.vercel.app/)
 
-Recommend clean code using algorithms and AI.     
-you can update this algorithm!
+Recommend clean code using algorithms and AI.
 
 ## support
 |Language|Algotirhm|AI|
