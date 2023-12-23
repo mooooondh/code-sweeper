@@ -1,5 +1,8 @@
 "use client"
 
+// react
+import { useLayoutEffect } from "react"
+
 // components
 import { LargeTextInput } from "@/components/textInputs/LargeTextInput"
 
@@ -7,13 +10,17 @@ import { LargeTextInput } from "@/components/textInputs/LargeTextInput"
 import { useChecker } from "@/hooks/useChecker"
 
 const EnterCodeArea = () => {
-  const { inputCode, UpdateInputCode } = useChecker()
+  const { inputCode, updateInputCode, clearResult } = useChecker()
+
+  useLayoutEffect(() => {
+    clearResult()
+  }, [])
 
   return (
     <div className="flex flex-1">
       <LargeTextInput
         value={inputCode}
-        onChange={(value) => UpdateInputCode(value)}
+        onChange={(value) => updateInputCode(value)}
         placeholder="코드를 입력해주세요."
       />
     </div>

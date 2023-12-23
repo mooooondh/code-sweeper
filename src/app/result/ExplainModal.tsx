@@ -6,7 +6,7 @@ interface props {
 export const ExplainModal = (props: props) => {
   if (props.isVisible) {
     return (
-      <div className="absolute left-4 top-12 bg-white rounded-md" style={{ padding: "8px" }}>
+      <div className="absolute left-4 top-12 bg-gray-600 rounded-lg" style={{ padding: "8px" }}>
         {props.children}
       </div>
     )

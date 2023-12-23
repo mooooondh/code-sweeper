@@ -1,9 +1,16 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 
+import localFont from 'next/font/local'
+
 import RecoilRootProvider from './RecoilRootProvider'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const d2Coding = localFont({
+  src: "./assets/fonts/D2Coding.ttf",
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Code Sweeper',
@@ -19,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={d2Coding.className}>
+      <body className={d2Coding.className}>
         <RecoilRootProvider>
           {children}
         </RecoilRootProvider>

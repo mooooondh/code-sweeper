@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import LOADING from "@/assets/icons/loading.svg"
+import LOADING from "../../app/assets/icons/loading.svg"
 
 interface props {
   isLoading: boolean

@@ -17,7 +17,7 @@ import { useChecker } from "@/hooks/useChecker"
 const AiResultArea = () => {
   const [isExplainModalVisible, setIsExplainModalVisible] = useState(false)
 
-  const { aiResult, aiResultLinedCode, CheckIsCleanCodeWithAi, isAiResultLoading } = useChecker()
+  const { aiResult, aiResultLinedCode, checkIsCleanCodeWithAi, isAiResultLoading } = useChecker()
 
   const renderAiResult = () => {
     if (isAiResultLoading) return <></>
@@ -39,7 +39,7 @@ const AiResultArea = () => {
         : <div className="flex flex-1 items-center justify-center">
           <NormalButton
             title={"AI추천 코드 보기"}
-            onClick={CheckIsCleanCodeWithAi}
+            onClick={checkIsCleanCodeWithAi}
           />
         </div>
     )
@@ -59,7 +59,7 @@ const AiResultArea = () => {
 
       <ExplainModal isVisible={isExplainModalVisible}>
         <div>
-          <p className="text-black">AI가 수정한 코드 입니다.</p>
+          <p>AI가 수정한 코드 입니다.</p>
         </div>
       </ExplainModal>
 

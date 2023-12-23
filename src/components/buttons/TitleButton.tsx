@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Spacer } from "../basics/Spacer"
 
 // image
-import LOGO from "../../assets/icons/logo.svg"
+import LOGO from "@/app/assets/icons/logo.svg"
 
 interface props { }
 
@@ -22,7 +22,7 @@ export const TitleButton = (props: props) => {
             height={32}
           />
           <Spacer distance={8} />
-          <p className="text-xl font-bold">Code Sweeper</p>
+          <p className="text-xl font-extrabold">Code Sweeper</p>
         </div>
         <Spacer distance={8} />
         <p className="text-sm">v{process.env.NEXT_PUBLIC_VERSION}</p>

@@ -12,14 +12,14 @@ import { useChecker } from "@/hooks/useChecker"
 const Footer = () => {
   const router = useRouter()
 
-  const { ClearResult } = useChecker()
+  const { clearResult } = useChecker()
 
   return (
     <div className="flex flex-row px-8 py-4 border-t-2 bg-gray-600">
       <NormalButton
         title={"뒤로가기"}
         onClick={() => {
-          ClearResult()
+          clearResult()
           router.back()
         }}
       />

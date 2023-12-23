@@ -8,8 +8,8 @@ import { NavigationButton } from "@/components/buttons/NavigationButton"
 import { NormalTag } from "@/components/Tags/NormalTag"
 
 // image
-import ICON from "../assets/icons/logo.svg"
-import GITHUB from "../assets/icons/github.svg"
+import ICON from "@/app/assets/icons/logo.svg"
+import GITHUB from "@/app/assets/icons/github.svg"
 
 export default function Home() {
   return (
@@ -35,7 +35,7 @@ export default function Home() {
           />
           <Spacer distance={16} />
 
-          <p className="text-8xl font-extrabold bg-gradient-to-r from-yellow-300 from-10% via-pink-600 to-indigo-500 text-transparent bg-clip-text">Code Sweeper</p>
+          <p className="text-8xl font-black bg-gradient-to-r from-yellow-300 from-10% via-pink-600 to-indigo-500 text-transparent bg-clip-text">Code Sweeper</p>
           <div>
             <NormalTag
               title={`v${process.env.NEXT_PUBLIC_VERSION}`}
@@ -46,7 +46,7 @@ export default function Home() {
         </div>
         <Spacer distance={16} />
 
-        <p className="text-2xl">깨끗한 코드를 추천해드립니다.</p>
+        <p className="text-2xl">{"<"}깨끗한 코드를 추천해드립니다.{"/>"}</p>
         <Spacer distance={64} />
 
         <NavigationButton

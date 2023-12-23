@@ -9,6 +9,7 @@ import { ClickableTag } from "@/components/Tags/ClickableTag"
 import { Spacer } from "@/components/basics/Spacer"
 import { ExplainModal } from "./ExplainModal"
 import { NormalTag } from "@/components/Tags/NormalTag"
+import { NavigationTextButton } from "@/components/buttons/NavigationTextButton"
 
 // hooks
 import { useChecker } from "@/hooks/useChecker"
@@ -55,7 +56,15 @@ const ResultArea = () => {
 
       <ExplainModal isVisible={isExplainModalVisible}>
         <div>
-          <p className="text-black">알고리즘이 검사한 결과입니다.</p>
+          <p>알고리즘이 검사한 결과입니다.</p>
+          <Spacer distance={8} />
+
+          <p>알고리즘 개선에 기여하고싶으시다면?</p>
+          <Spacer distance={4} />
+          <NavigationTextButton
+            title={"GitHub으로 이동"}
+            onClick={() => window.open("https://github.com/mooooondh/code-sweeper")}
+          />
         </div>
       </ExplainModal>
     </div>

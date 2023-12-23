@@ -36,11 +36,11 @@ export const useChecker = () => {
     setSelectedLanguage(updatedLanguage)
   }
 
-  const UpdateInputCode = (updatedCode: string) => {
+  const updateInputCode = (updatedCode: string) => {
     setInputCode(updatedCode)
   }
 
-  const CheckIsCleanCode = () => {
+  const checkIsCleanCode = () => {
     setLinedInputCode(lineSeperator(inputCode))
 
     switch (selectedLanguage) {
@@ -52,7 +52,7 @@ export const useChecker = () => {
     }
   }
 
-  const CheckIsCleanCodeWithAi = async () => {
+  const checkIsCleanCodeWithAi = async () => {
     setIsAiResultLoading(true)
 
     const response = await axios({
@@ -68,12 +68,25 @@ export const useChecker = () => {
     setIsAiResultLoading(false)
   }
 
-  const ClearResult = () => {
+  const clearResult = () => {
     setLinedInputCode([])
     setCheckResult({})
     setAiResult("")
     setAiResultLinedCode([])
   }
 
-  return { selectedLanguage, updateLanguage, inputCode, UpdateInputCode, CheckIsCleanCode, CheckIsCleanCodeWithAi, linedInputCode, checkResult, aiResult, aiResultLinedCode, isAiResultLoading, ClearResult }
+  return {
+    selectedLanguage,
+    updateLanguage,
+    inputCode,
+    updateInputCode,
+    checkIsCleanCode,
+    checkIsCleanCodeWithAi,
+    linedInputCode,
+    checkResult,
+    aiResult,
+    aiResultLinedCode,
+    isAiResultLoading,
+    clearResult
+  }
 }
