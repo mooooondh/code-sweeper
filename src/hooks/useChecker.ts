@@ -30,6 +30,7 @@ export const useChecker = () => {
   const [aiResult, setAiResult] = useRecoilState(aiResultState)
   const [aiResultLinedCode, setAiResultLinedCode] = useRecoilState(aiResultLinedCodeState)
 
+  const [isAlgorithmLoading, setIsAlgorithmLoading] = useState(false)
   const [isAiResultLoading, setIsAiResultLoading] = useState(false)
 
   const updateLanguage = (updatedLanguage: ILanguage) => {
@@ -41,6 +42,7 @@ export const useChecker = () => {
   }
 
   const checkIsCleanCode = () => {
+    setIsAlgorithmLoading(true)
     setLinedInputCode(lineSeperator(inputCode))
 
     switch (selectedLanguage) {
@@ -50,6 +52,8 @@ export const useChecker = () => {
         break
       }
     }
+
+    setIsAlgorithmLoading(false)
   }
 
   const checkIsCleanCodeWithAi = async () => {
@@ -87,6 +91,7 @@ export const useChecker = () => {
     aiResult,
     aiResultLinedCode,
     isAiResultLoading,
+    isAlgorithmLoading,
     clearResult
   }
 }
