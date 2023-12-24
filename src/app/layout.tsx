@@ -1,7 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import localFont from 'next/font/local'
 
 import RecoilRootProvider from './RecoilRootProvider'
@@ -32,6 +33,7 @@ export default function RootLayout({
         <RecoilRootProvider>
           {children}
           <Analytics />
+          <SpeedInsights />
         </RecoilRootProvider>
       </body>
     </html>
