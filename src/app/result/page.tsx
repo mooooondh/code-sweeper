@@ -8,7 +8,7 @@ const Result = () => {
   return (
     <div className="flex flex-1 flex-col h-screen bg-gray-800">
       <Header />
-      <div className="flex flex-1 overflow-y-scroll">
+      <div className="flex flex-1">
         <ResultArea />
         <AiResultArea />
       </div>

@@ -7,8 +7,8 @@ interface props {
 export const LargeTextInput = (props: props) => {
   return (
     <textarea
-      className="flex flex-1 bg-gray-800 text-white outline-none"
-      style={{ boxSizing: "border-box", padding: "16px", resize: "none", height: "100%" }}
+      className="flex flex-1 bg-gray-800 text-white outline-none p-4"
+      style={{ boxSizing: "border-box", resize: "none", height: "100%" }}
       wrap="off"
       value={props.value}
       onChange={(event) => props.onChange(event.target.value)}

@@ -6,6 +6,7 @@ import Image from "next/image"
 import { Spacer } from "@/components/basics/Spacer"
 import { NavigationButton } from "@/components/buttons/NavigationButton"
 import { NormalTag } from "@/components/Tags/NormalTag"
+import { NavigationTextButton } from "@/components/buttons/NavigationTextButton"
 
 // image
 import ICON from "@/app/assets/icons/logo.svg"
@@ -13,7 +14,7 @@ import GITHUB from "@/app/assets/icons/github.svg"
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 h-screen bg-gray-800" style={{ padding: "16px" }}>
+    <div className="flex flex-col flex-1 p-4 h-screen bg-gray-800">
       <div className="flex justify-end">
         <Link href={"https://github.com/mooooondh/code-sweeper"}>
           <Image
@@ -52,6 +53,12 @@ export default function Home() {
         <NavigationButton
           title={"시작하기"}
           navigationLink={"/inputCode"}
+        />
+        <Spacer distance={24} />
+
+        <NavigationTextButton
+          title={"서비스 알아보기"}
+          navigationLink="/about"
         />
       </div>
     </div>

@@ -23,7 +23,7 @@ const ResultArea = () => {
   const { selectedLanguage, linedInputCode } = useChecker()
 
   return (
-    <div className="relative flex flex-1 flex-col overflow-y-scroll whitespace-pre overflow-x-auto border-r border-r-white" style={{ padding: "16px" }}>
+    <div className="relative flex flex-1 flex-col overflow-y-scroll whitespace-pre overflow-x-auto p-4 border-r border-r-white">
       <div className="flex flex-row items-center justify-between">
         <ClickableTag
           title={"알고리즘"}
@@ -63,7 +63,7 @@ const ResultArea = () => {
           <Spacer distance={4} />
           <NavigationTextButton
             title={"GitHub으로 이동"}
-            onClick={() => window.open("https://github.com/mooooondh/code-sweeper")}
+            navigationLink={"https://github.com/mooooondh/code-sweeper"}
           />
         </div>
       </ExplainModal>

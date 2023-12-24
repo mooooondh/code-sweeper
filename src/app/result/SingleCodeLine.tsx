@@ -10,7 +10,7 @@ import { Spacer } from "@/components/basics/Spacer"
 import { useChecker } from "@/hooks/useChecker"
 
 // utils
-import typeTranslator from "@/utils/translator/typeTranslator.json"
+import warnTypeTranslator from "@/utils/translator/warnTypeTranslator.json"
 
 interface props {
   lineNumber: number
@@ -29,7 +29,7 @@ export const SingleCodeLine = (props: props) => {
         return (
           <div>
             <div className="flex">
-              <p className="text-right text-gray-400 bg-yellow-400/40" style={{ minWidth: "42px", paddingRight: "16px" }}>{props.lineNumber + 1}</p>
+              <p className="text-right p-4 text-gray-400 bg-yellow-400/40" style={{ minWidth: "42px" }}>{props.lineNumber + 1}</p>
               <p
                 className="bg-yellow-400/40 hover:border border-white"
                 onClick={() => setIsMessageVisible(!isMessageVisible)}
@@ -46,7 +46,7 @@ export const SingleCodeLine = (props: props) => {
                   checkResult[props.lineNumber].map((errorMessage, idx) =>
                     <div key={idx} className="flex">
                       <div className="flex flex-col" style={{ paddingLeft: "42px" }}>
-                        <p className="font-bold">타입 : {typeTranslator[errorMessage.checkType]}</p>
+                        <p className="font-bold">타입 : {warnTypeTranslator[errorMessage.checkType]}</p>
                         <Spacer distance={4} />
                         <p>{errorMessage.reason}</p>
                       </div>
@@ -62,7 +62,7 @@ export const SingleCodeLine = (props: props) => {
       case "error": {
         return (
           <div className="flex">
-            <p className="text-right text-gray-400" style={{ minWidth: "42px", paddingRight: "16px" }}>{props.lineNumber + 1}</p>
+            <p className="pr-4 text-right text-gray-400" style={{ minWidth: "42px" }}>{props.lineNumber + 1}</p>
             <p>{props.codeLine}</p>
           </div>
         )
@@ -73,7 +73,7 @@ export const SingleCodeLine = (props: props) => {
   else {
     return (
       <div className="flex">
-        <p className="text-right text-gray-400" style={{ minWidth: "42px", paddingRight: "16px" }}>{props.lineNumber + 1}</p>
+        <p className="pr-4 text-right text-gray-400" style={{ minWidth: "42px" }}>{props.lineNumber + 1}</p>
         <p>{props.codeLine}</p>
       </div>
     )

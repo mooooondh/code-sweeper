@@ -1,0 +1,1 @@
+export type IAboutMenus = "about" | "contribute"

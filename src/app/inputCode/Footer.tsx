@@ -1,6 +1,6 @@
 "use client"
 
-// nextjs
+// next
 import { useRouter } from "next/navigation"
 
 // components

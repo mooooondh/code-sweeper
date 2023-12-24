@@ -46,7 +46,7 @@ const AiResultArea = () => {
   }
 
   return (
-    <div className="relative flex flex-1 flex-col overflow-y-scroll whitespace-pre overflow-x-auto border-l border-l-white" style={{ padding: "16px" }}>
+    <div className="relative flex flex-1 flex-col overflow-y-scroll whitespace-pre overflow-x-auto p-4 border-l border-l-white">
       <ClickableTag
         title={"AI"}
         backgroundColor={"bg-blue-600"}

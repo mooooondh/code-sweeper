@@ -15,8 +15,7 @@ interface props {
 export const ChangeLanguageDropdown = (props: props) => {
   return (
     <select
-      className="rounded-md outline-none"
-      style={{ padding: "4px" }}
+      className="rounded-md outline-none p-1"
       onChange={(e) => props.onChange(e.target.value as ILanguage)}
       value={props.selectedItem}
     >
