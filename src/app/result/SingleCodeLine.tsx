@@ -27,9 +27,9 @@ export const SingleCodeLine = (props: props) => {
     switch (checkResult[props.lineNumber][0].type) {
       case "warn": {
         return (
-          <div>
+          <>
             <div className="flex">
-              <p className="text-right p-4 text-gray-400 bg-yellow-400/40" style={{ minWidth: "42px" }}>{props.lineNumber + 1}</p>
+              <p className="text-right pr-4 text-gray-400 bg-yellow-400/40" style={{ minWidth: "42px" }}>{props.lineNumber + 1}</p>
               <p
                 className="bg-yellow-400/40 hover:border border-white"
                 onClick={() => setIsMessageVisible(!isMessageVisible)}
@@ -56,7 +56,7 @@ export const SingleCodeLine = (props: props) => {
               </div>
             }
 
-          </div>
+          </>
         )
       }
       case "error": {
