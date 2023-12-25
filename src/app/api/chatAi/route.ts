@@ -1,6 +1,8 @@
+// next
+import { NextRequest, NextResponse } from "next/server"
+
 // libraries
 import OpenAI from "openai"
-import { NextRequest, NextResponse } from "next/server"
 
 // utils
 import { extractCodeInAiResult } from "./extractCodeInAiResult"

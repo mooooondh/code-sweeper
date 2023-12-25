@@ -1,5 +1,5 @@
 // interfaces
-import { ICheckResults } from "../../utils/interfaces/check"
+import { ICheckResults } from "@/utils/interfaces/check"
 
 // algorithm
 import { meaningfulName } from "./meaningfulName"

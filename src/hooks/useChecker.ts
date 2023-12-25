@@ -11,9 +11,6 @@ import axios from "axios"
 import { selectedLanguageState, inputCodeState, linedInputCodeState } from '../utils/recoilStates/inputCode'
 import { checkResultState, aiResultState, aiResultLinedCodeState } from '../utils/recoilStates/result'
 
-// checkAlgorithm
-import { IsCleanCode } from '@/checkAlgorithm/javascript'
-
 // interfaces
 import { ILanguage } from '@/utils/interfaces/languages'
 
@@ -41,17 +38,18 @@ export const useChecker = () => {
     setInputCode(updatedCode)
   }
 
-  const checkIsCleanCode = () => {
+  const checkIsCleanCode = async () => {
     setIsAlgorithmLoading(true)
     setLinedInputCode(lineSeperator(inputCode))
 
-    switch (selectedLanguage) {
-      case "javascript": {
-        const cleanCodeCheckResult = IsCleanCode(lineSeperator(inputCode))
-        setCheckResult(cleanCodeCheckResult)
-        break
-      }
-    }
+    const response = await axios({
+      method: 'post',
+      url: '/api/algorithm',
+      headers: { 'content-type': 'application/json' },
+      data: { language: selectedLanguage, inputCode: inputCode },
+    })
+
+    setCheckResult(response.data.cleanCodeCheckResult)
 
     setIsAlgorithmLoading(false)
   }

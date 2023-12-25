@@ -1,5 +1,5 @@
 // interfaces
-import { ICheckResults, ISingleCheckResult } from "../../utils/interfaces/check"
+import { ICheckResults, ISingleCheckResult } from "../../../../../utils/interfaces/check"
 
 export const findConsoleLog = (inputCode: string, lineNumber: number, currentResult: ICheckResults) => {
   let result = currentResult
